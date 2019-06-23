@@ -2,5 +2,4 @@ gunicorn
 flask
 flask-cors
 opencv-python-headless
-io
 matplotlib
