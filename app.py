@@ -6,6 +6,10 @@ from Kmeans import compress_image, resize
 app = Flask(__name__)
 CORS(app)
 
+@app.route('/')
+def main():
+    return "Welcome to the k-means API! Documentation will be added here shortly!"
+
 @app.route('/upload', methods=['POST'])
 @cross_origin(origin='localhost')
 def handle_upload():
