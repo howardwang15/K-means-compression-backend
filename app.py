@@ -11,7 +11,6 @@ def main():
     return "Welcome to the k-means API! Documentation will be added here shortly!"
 
 @app.route('/upload', methods=['POST'])
-@cross_origin(origin='*')
 def handle_upload():
     image = request.files['file']
     data = io.BytesIO(image.read())
