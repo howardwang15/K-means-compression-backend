@@ -37,7 +37,6 @@ def compress_image(filename, byte_array):
     compressed = k_means_driver(image, 4)
     extension = get_extension(filename)
     _, buffer = cv2.imencode(extension, compressed)
-    cv2.imwrite(filename, compressed)
     return buffer
 
 
