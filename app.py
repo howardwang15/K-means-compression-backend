@@ -12,6 +12,7 @@ def main():
 
 @app.route('/upload', methods=['POST'])
 def handle_upload():
+    return "hello"
     image = request.files['file']
     data = io.BytesIO(image.read())
     data = data.read()
