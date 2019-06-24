@@ -16,7 +16,7 @@ def handle_upload():
     image = request.files['file']
     data = io.BytesIO(image.read())
     data = data.read()
-    compressed_buffer = compress_image(image.filename, data)
+    # compressed_buffer = compress_image(image.filename, data)
     return "hello world"
     # return make_response(compressed_buffer.tobytes())
 
