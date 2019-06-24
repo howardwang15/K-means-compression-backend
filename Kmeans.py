@@ -20,7 +20,7 @@ def decode_image(byte_array):
 def resize(filename, byte_array):
     image = decode_image(byte_array)
     height, width, _ = image.shape
-    resize_ratio = 480./height
+    resize_ratio = 360./height
     image = image.astype(float)
     image = cv2.resize(image, None, fx=resize_ratio, fy=resize_ratio)
     extension = get_extension(filename)
