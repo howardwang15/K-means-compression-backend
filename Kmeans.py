@@ -34,9 +34,9 @@ def compress_image(filename, byte_array):
         resize_ratio = 480./height
         image = cv2.resize(image, None, fx=resize_ratio, fy=resize_ratio)
     image = image.astype(float) # convert from unsigned int to float to make distance calculations correct
-    compressed = k_means_driver(image, 4)
+    # compressed = k_means_driver(image, 4)
     extension = get_extension(filename)
-    _, buffer = cv2.imencode(extension, compressed)
+    _, buffer = cv2.imencode(extension, image)
     return buffer
 
 
