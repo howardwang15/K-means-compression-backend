@@ -12,11 +12,12 @@ def main():
 
 @app.route('/upload', methods=['POST'])
 def handle_upload():
-    return "hello"
-    # image = request.files['file']
-    # data = io.BytesIO(image.read())
-    # data = data.read()
-    # compressed_buffer = compress_image(image.filename, data)
+    # return "hello"
+    image = request.files['file']
+    data = io.BytesIO(image.read())
+    data = data.read()
+    compressed_buffer = compress_image(image.filename, data)
+    return "hello world"
     # return make_response(compressed_buffer.tobytes())
 
 @app.route('/resize', methods=['POST'])
